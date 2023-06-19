@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#99A3A4">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculator"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="30sp"/>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/solution_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_above="@+id/result_tv"
+            android:layout_marginBottom="16dp"
+            android:text="@string/_0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/fade_gray"
+            android:textSize="45sp" />
+
+        <TextView
+            android:id="@+id/result_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_above="@+id/button_layout"
+            android:text="@string/_0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/black"
+            android:textSize="65sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_buttons"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_clearAll"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_operator_buttons"
+                android:text="@string/c"
+                android:textColor="@color/fade_gray"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_modulus"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_operator_buttons"
+                android:text="@string/modulus"
+                android:textColor="@color/fade_gray"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_clear"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_operator_buttons"
+                android:text="@string/backspace"
+                android:textColor="@color/fade_gray"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_divide"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_operator_buttons"
+                android:text="@string/divide"
+                android:textColor="@color/fade_gray"
+                android:textSize="28sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_seven"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_7"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_eight"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_8"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_nine"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_9"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_multiply"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_operator_buttons"
+                android:text="@string/multiply"
+                android:textColor="@color/fade_gray"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_four"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_4"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_five"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_5"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_six"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_6"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_minus"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_operator_buttons"
+                android:text="@string/substract"
+                android:textColor="@color/fade_gray"
+                android:textSize="28sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_one"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_1"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_two"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_2"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_three"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_3"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_plus"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_operator_buttons"
+                android:text="@string/plus"
+                android:textColor="@color/fade_gray"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_double_zero"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_00"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_zero"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/_0"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_dot"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_button"
+                android:text="@string/dott"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_isEqualTo"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_margin="12dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_operator_buttons"
+                android:text="@string/isEqualsTo"
+                android:textColor="@color/fade_gray"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
